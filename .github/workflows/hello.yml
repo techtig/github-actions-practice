@@ -1,0 +1,17 @@
+# Workflows
+# Should have Name
+name: Hello
+
+on:
+  workflow_dispatch: 
+# Jobs tell what the workflow should do, there can be one or more than one jobs, hence we can write jobs
+# Job is an ojbect so needs indentation
+# Should be inside workflow
+jobs:
+  say-hello:
+    # Creates an ephemeral container with ubuntu running
+    runs-on: ubuntu-latest
+    # That ephemeral container will have steps to execute, hence name those steps and use run: run has the command
+    steps:
+      - name: say hello to everyone
+        run: echo "Hello Dosto"
